@@ -1,0 +1,30 @@
+{
+  "settings":{
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings":{
+    "properties":{
+      "author":{
+        "type":"keyword"
+      },
+      "title":{
+        "type":"text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "description":{
+        "type":"text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "pub_date":{
+        "type":"date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+      "category":{
+        "type":"keyword"
+      }
+    }
+  }
+}
